@@ -1,0 +1,493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C551838A-97E3-45B0-9D19-891773F560D9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>hx</RootNamespace>
+    <AssemblyName>hx</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComboBoxMultiColumns">
+      <HintPath>C:\Users\Vicky\Desktop\毕业设计\系统设计\ComboBoxMultiColumns\bin\Release\ComboBoxMultiColumns.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoCount.cs" />
+    <Compile Include="Connstr.cs" />
+    <Compile Include="databaseexe.cs" />
+    <Compile Include="dataValue.cs" />
+    <Compile Include="Basic\frmClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\frmClient.Designer.cs">
+      <DependentUpon>frmClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\frmClientAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\frmClientAdd.Designer.cs">
+      <DependentUpon>frmClientAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryGenerator.cs" />
+    <Compile Include="MatInGenerator.cs" />
+    <Compile Include="ProInGenerator.cs" />
+    <Compile Include="PurchaseGenerator.cs" />
+    <Compile Include="SelectMultiMatIn.cs" />
+    <Compile Include="stock\frmProStock5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock\frmProStock5.Designer.cs">
+      <DependentUpon>frmProStock5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stock\frmMatStock5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock\frmMatStock5.Designer.cs">
+      <DependentUpon>frmMatStock5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\frmMatCho4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="purchase\frmMatCho4.Designer.cs">
+      <DependentUpon>frmMatCho4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manu\frmClientChoose3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manu\frmClientChoose3.Designer.cs">
+      <DependentUpon>frmClientChoose3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManuGenarator.cs" />
+    <Compile Include="Manu\frmBomAdd3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manu\frmBomAdd3.Designer.cs">
+      <DependentUpon>frmBomAdd3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manu\frmBom3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manu\frmBom3.Designer.cs">
+      <DependentUpon>frmBom3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\frmSaleModify2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\frmSaleModify2.Designer.cs">
+      <DependentUpon>frmSaleModify2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manu\frmSaleSearch3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manu\frmSaleSearch3.Designer.cs">
+      <DependentUpon>frmSaleSearch3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stock\frmDeliveryAdd5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock\frmDeliveryAdd5.Designer.cs">
+      <DependentUpon>frmDeliveryAdd5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stock\frmDeliveryChoose5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock\frmDeliveryChoose5.Designer.cs">
+      <DependentUpon>frmDeliveryChoose5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stock\frmDeliveryManage5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stock\frmDeliveryManage5.Designer.cs">
+      <DependentUpon>frmDeliveryManage5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manu\frmManuOrderAdd3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manu\frmManuOrderAdd3.Designer.cs">
+      <DependentUpon>frmManuOrderAdd3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manu\frmProInAdd3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manu\frmProInAdd3.Designer.cs">
+      <DependentUpon>frmProInAdd3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manu\frmManuDetail3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manu\frmManuDetail3.Designer.cs">
+      <DependentUpon>frmManuDetail3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manu\frmManuManage3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manu\frmManuManage3.Designer.cs">
+      <DependentUpon>frmManuManage3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\frmMaterialIn4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="purchase\frmMaterialIn4.Designer.cs">
+      <DependentUpon>frmMaterialIn4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\frmMaterialInOrder4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="purchase\frmMaterialInOrder4.Designer.cs">
+      <DependentUpon>frmMaterialInOrder4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\frmOrderDetail2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\frmOrderDetail2.Designer.cs">
+      <DependentUpon>frmOrderDetail2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\frmOrderFix2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\frmOrderFix2.Designer.cs">
+      <DependentUpon>frmOrderFix2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\frmOrderManage2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\frmOrderManage2.Designer.cs">
+      <DependentUpon>frmOrderManage2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\frmFixAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\frmFixAdd.Designer.cs">
+      <DependentUpon>frmFixAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\frmFixProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\frmFixProduct.Designer.cs">
+      <DependentUpon>frmFixProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\frmMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\frmMaterial.Designer.cs">
+      <DependentUpon>frmMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\frmMaterialAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\frmMaterialAdd.Designer.cs">
+      <DependentUpon>frmMaterialAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\frmFixPair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\frmFixPair.Designer.cs">
+      <DependentUpon>frmFixPair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sale\frmOrderSaleNew2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sale\frmOrderSaleNew2.Designer.cs">
+      <DependentUpon>frmOrderSaleNew2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\frmPairList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\frmPairList.Designer.cs">
+      <DependentUpon>frmPairList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\frmPairModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\frmPairModify.Designer.cs">
+      <DependentUpon>frmPairModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manu\frmProductIn3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manu\frmProductIn3.Designer.cs">
+      <DependentUpon>frmProductIn3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\frmProductType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\frmProductType.Designer.cs">
+      <DependentUpon>frmProductType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\frmProductTypeAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\frmProductTypeAdd.Designer.cs">
+      <DependentUpon>frmProductTypeAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\frmPurchaseAdd4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="purchase\frmPurchaseAdd4.Designer.cs">
+      <DependentUpon>frmPurchaseAdd4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\frmPurchaseChoose4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="purchase\frmPurchaseChoose4.Designer.cs">
+      <DependentUpon>frmPurchaseChoose4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="purchase\frmPurchaseManage4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="purchase\frmPurchaseManage4.Designer.cs">
+      <DependentUpon>frmPurchaseManage4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\frmSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\frmSupplier.Designer.cs">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\frmSupplierAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\frmSupplierAdd.Designer.cs">
+      <DependentUpon>frmSupplierAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\frmSupplierPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\frmSupplierPrice.Designer.cs">
+      <DependentUpon>frmSupplierPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="te2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="te2.Designer.cs">
+      <DependentUpon>te2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserIden\frmUserManage7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserIden\frmUserManage7.Designer.cs">
+      <DependentUpon>frmUserManage7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderGenerator.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Basic\frmClient.resx">
+      <DependentUpon>frmClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\frmClientAdd.resx">
+      <DependentUpon>frmClientAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manu\frmClientChoose3.resx">
+      <DependentUpon>frmClientChoose3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manu\frmBomAdd3.resx">
+      <DependentUpon>frmBomAdd3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manu\frmBom3.resx">
+      <DependentUpon>frmBom3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manu\frmSaleSearch3.resx">
+      <DependentUpon>frmSaleSearch3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="purchase\frmMatCho4.resx">
+      <DependentUpon>frmMatCho4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\frmSaleModify2.resx">
+      <DependentUpon>frmSaleModify2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stock\frmDeliveryAdd5.resx">
+      <DependentUpon>frmDeliveryAdd5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stock\frmDeliveryChoose5.resx">
+      <DependentUpon>frmDeliveryChoose5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stock\frmDeliveryManage5.resx">
+      <DependentUpon>frmDeliveryManage5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manu\frmManuOrderAdd3.resx">
+      <DependentUpon>frmManuOrderAdd3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manu\frmProInAdd3.resx">
+      <DependentUpon>frmProInAdd3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manu\frmManuDetail3.resx">
+      <DependentUpon>frmManuDetail3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manu\frmManuManage3.resx">
+      <DependentUpon>frmManuManage3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="purchase\frmMaterialIn4.resx">
+      <DependentUpon>frmMaterialIn4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="purchase\frmMaterialInOrder4.resx">
+      <DependentUpon>frmMaterialInOrder4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\frmOrderDetail2.resx">
+      <DependentUpon>frmOrderDetail2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\frmOrderFix2.resx">
+      <DependentUpon>frmOrderFix2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\frmOrderManage2.resx">
+      <DependentUpon>frmOrderManage2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\frmFixAdd.resx">
+      <DependentUpon>frmFixAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\frmFixProduct.resx">
+      <DependentUpon>frmFixProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.byn.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\frmMaterial.resx">
+      <DependentUpon>frmMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\frmMaterialAdd.resx">
+      <DependentUpon>frmMaterialAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\frmFixPair.resx">
+      <DependentUpon>frmFixPair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sale\frmOrderSaleNew2.resx">
+      <DependentUpon>frmOrderSaleNew2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\frmPairList.resx">
+      <DependentUpon>frmPairList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\frmPairModify.resx">
+      <DependentUpon>frmPairModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manu\frmProductIn3.resx">
+      <DependentUpon>frmProductIn3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\frmProductType.resx">
+      <DependentUpon>frmProductType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\frmProductTypeAdd.resx">
+      <DependentUpon>frmProductTypeAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="purchase\frmPurchaseAdd4.resx">
+      <DependentUpon>frmPurchaseAdd4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="purchase\frmPurchaseChoose4.resx">
+      <DependentUpon>frmPurchaseChoose4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="purchase\frmPurchaseManage4.resx">
+      <DependentUpon>frmPurchaseManage4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\frmSupplier.resx">
+      <DependentUpon>frmSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\frmSupplierAdd.resx">
+      <DependentUpon>frmSupplierAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\frmSupplierPrice.resx">
+      <DependentUpon>frmSupplierPrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stock\frmMatStock5.resx">
+      <DependentUpon>frmMatStock5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stock\frmProStock5.resx">
+      <DependentUpon>frmProStock5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="te2.resx">
+      <DependentUpon>te2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserIden\frmUserManage7.resx">
+      <DependentUpon>frmUserManage7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
